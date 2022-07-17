@@ -1,62 +1,69 @@
 const inquirer = require('inquirer')
-const fs = require('fs'); inquirer
-    .prompt([
+const fs = require('fs');
 
-        {
-            type: 'input',
-            name: 'username',
-            message: 'Enter Github username.',
-        },
-        {
-            type: 'input',
-            name: 'email',
-            message: 'Enter email address.',
-        },
-        {
-            type: 'input',
-            name: 'title',
-            message: 'Enter project title.',
-        },
+const readmeWrite = (answers) => `test`;
 
-        {
-            type: 'input',
-            name: 'description',
-            message: 'Enter project description.',
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'Enter installation instructions.',
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'Enter installation information.',
-        },
-        {
-            type: 'input',
-            name: 'license',
-            message: 'Enter project license.',
-        },
-        {
-            type: 'input',
-            name: 'contribution',
-            message: 'Enter contribution guidelines.',
-        },
-        {
-            type: 'input',
-            name: 'tests',
-            message: 'Enter test instructions',
-        },
-        {
-            type: 'input',
-            name: 'license',
-            message: 'Select license.',
-        },
-    ])
+inquirer.prompt([
+
+    {
+        type: 'input',
+        name: 'username',
+        message: 'Enter Github username.',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter email address.',
+    },
+    {
+        type: 'input',
+        name: 'title',
+        message: 'Enter project title.',
+    },
+
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Enter project description.',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Enter installation instructions.',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter installation information.',
+    },
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Enter project license.',
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'Enter contribution guidelines.',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Enter test instructions',
+    },
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Select license.',
+    },
+])
     .then((answers) => {
-        console.log(answers)
-        // fs.writeFile('index.md', htmlPageContent, (err) =>
-        //     err ? console.log(err) : console.log('Successfully created index.html!')
-        // );
+
+        const readmeContent = readmeWrite(answers);
+        fs.writeFile('index.me', readmeContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created index.html!')
+        );
     });
+
+
+
