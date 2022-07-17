@@ -1,7 +1,74 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
 
-const readmeWrite = (answers) => `test`;
+const readmeWrite = (answers) => `
+
+# ${answers.title}
+
+<div id="top"></div>
+
+<br />
+<div align="center">
+
+
+<h3 align="center">${answers.title}</h3>
+
+  <p align="center">
+  ${answers.description}
+    
+</div>
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#tests">Tests</a></li>
+    <li><a href="#questions">Questions</a></li>
+  </ol>
+</details>
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Installation
+
+${answers.installation}
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Usage
+
+${answers.usage}
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## License
+
+Distributed under the ${answers.license} License.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contributing
+
+${answers.contribution}
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Tests
+
+${answers.tests}
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Questions
+
+Github: [github.com/${answers.username}](github.com/${answers.username}) 
+Email: [${answers.email}](${answers.email}) 
+`;
 
 inquirer.prompt([
 
@@ -34,7 +101,7 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter installation information.',
+        message: 'Enter usage information.',
     },
     {
         type: 'input',
@@ -60,7 +127,7 @@ inquirer.prompt([
     .then((answers) => {
 
         const readmeContent = readmeWrite(answers);
-        fs.writeFile('index.me', readmeContent, (err) =>
+        fs.writeFile('index.md', readmeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created index.html!')
         );
     });
