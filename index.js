@@ -3,38 +3,43 @@ const fs = require('fs'); inquirer
     .prompt([
         {
             type: 'input',
-            name: 'name',
-            message: 'What is your name?',
+            name: 'title',
+            message: 'Enter project title.',
         },
         {
             type: 'input',
-            name: 'location',
-            message: 'Where are you from?',
+            name: 'description',
+            message: 'Enter project description.',
         },
         {
             type: 'input',
-            name: 'hobby',
-            message: 'What is your favorite hobby?',
+            name: 'installation',
+            message: 'Enter installation instructions.',
         },
         {
             type: 'input',
-            name: 'food',
-            message: 'What is your favorite food?',
+            name: 'license',
+            message: 'Enter project license.',
         },
         {
             type: 'input',
-            name: 'github',
-            message: 'Enter your GitHub Username',
+            name: 'contribution',
+            message: 'Enter contribution credits.',
         },
         {
             type: 'input',
-            name: 'linkedin',
-            message: 'Enter your LinkedIn URL.',
+            name: 'tests',
+            message: 'Enter tests',
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'Enter questions',
         },
     ])
     .then((answers) => {
         console.log(answers)
-        // fs.writeFile('index.html', htmlPageContent, (err) =>
+        // fs.writeFile('index.md', htmlPageContent, (err) =>
         //     err ? console.log(err) : console.log('Successfully created index.html!')
         // );
     });
