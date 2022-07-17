@@ -1,11 +1,23 @@
 const inquirer = require('inquirer')
 const fs = require('fs'); inquirer
     .prompt([
+
+        {
+            type: 'input',
+            name: 'username',
+            message: 'Enter Github username.',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter email address.',
+        },
         {
             type: 'input',
             name: 'title',
             message: 'Enter project title.',
         },
+
         {
             type: 'input',
             name: 'description',
@@ -18,23 +30,28 @@ const fs = require('fs'); inquirer
         },
         {
             type: 'input',
+            name: 'usage',
+            message: 'Enter installation information.',
+        },
+        {
+            type: 'input',
             name: 'license',
             message: 'Enter project license.',
         },
         {
             type: 'input',
             name: 'contribution',
-            message: 'Enter contribution credits.',
+            message: 'Enter contribution guidelines.',
         },
         {
             type: 'input',
             name: 'tests',
-            message: 'Enter tests',
+            message: 'Enter test instructions',
         },
         {
             type: 'input',
-            name: 'questions',
-            message: 'Enter questions',
+            name: 'license',
+            message: 'Select license.',
         },
     ])
     .then((answers) => {
