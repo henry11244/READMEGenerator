@@ -49,12 +49,13 @@ The motivation behind this project is to design a quick and easy method to produ
 ## Instructions
 
 
-Once you have navagated to the webpage: 
+Follow the instructions below to generate custom README files: 
 
-- You are presented with the current date and time.
-- You are able to navagate to the search bar and enter a city in which you wish to view weather data for.
-- Weather information is then displayed for the current day as well as the next five days.
-- Prior searches are saved locally so they persist on refreshing the webpage.
+- You will need to download the repository files to your local machine. 
+- Open the command prompt and navigate to the repository folder.
+- Type the following into the command prompt 'node index.js'.
+- You will then be presented with a series of questions about your project.
+- Once these questions are answered, a README file tited <i>ResultREADME.md </i> will be generated and added to the repository folder. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
