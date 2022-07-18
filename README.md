@@ -48,7 +48,6 @@ The motivation behind this project is to design a quick and easy method to produ
 
 ## Instructions
 
-
 Follow the instructions below to generate custom README files: 
 
 - You will need to download the repository files to your local machine. 
