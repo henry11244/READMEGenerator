@@ -108,65 +108,64 @@ Github: [github.com/${answers.username}](https://github.com/${answers.username})
 Email: [${answers.email}](${answers.email}) 
 `;
 
-// const promptName = ['username', 'email', 'title', 'description', 'installation', 'usage', 'contribution', 'tests']
-// const promptMessage =['username', 'email', 'project title', 'project description', 'installation instructions', 'usage instructions', 'contribution guidelines', 'test instructions'] 
+function start() {
+    inquirer.prompt([
 
-inquirer.prompt([
+        {
+            type: 'input',
+            name: 'username',
+            message: 'Enter Github username.',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter email address.',
+        },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'Enter project title.',
+        },
 
-    {
-        type: 'input',
-        name: 'username',
-        message: 'Enter Github username.',
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'Enter email address.',
-    },
-    {
-        type: 'input',
-        name: 'title',
-        message: 'Enter project title.',
-    },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'Enter project description.',
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'Enter installation instructions.',
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Enter usage information.',
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Enter contribution guidelines.',
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Enter test instructions',
+        },
+        {
+            type: 'list',
+            name: 'license',
+            message: 'Select license.',
+            choices: license
+        },
+    ])
+        .then((answers) => {
+            console.log(answers.license)
+            const readmeContent = readmeWrite(answers);
+            fs.writeFile('ResultREADME.md', readmeContent, (err) =>
+                err ? console.log(err) : console.log('Successfully created ResultREADME.md!')
+            );
+        });
+}
 
-    {
-        type: 'input',
-        name: 'description',
-        message: 'Enter project description.',
-    },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'Enter installation instructions.',
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Enter usage information.',
-    },
-    {
-        type: 'input',
-        name: 'contribution',
-        message: 'Enter contribution guidelines.',
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'Enter test instructions',
-    },
-    {
-        type: 'list',
-        name: 'license',
-        message: 'Select license.',
-        choices: license
-    },
-])
-    .then((answers) => {
-        console.log(answers.license)
-        const readmeContent = readmeWrite(answers);
-        fs.writeFile('ResultREADME.md', readmeContent, (err) =>
-            err ? console.log(err) : console.log('Successfully created ResultREADME.md!')
-        );
-    });
-
-
+start()
