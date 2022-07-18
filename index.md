@@ -10,9 +10,7 @@
 
 <h3 align="center">Title</h3>
 
-  <p align="center">
-  Description
-    
+ 
 </div>
 
 <details>
@@ -63,5 +61,6 @@ tes
 
 ## Questions
 
-Github: [github.com/henry11244](github.com/henry11244) 
+Github: [github.com/henry11244](https://github.com/henry11244) 
+<br>
 Email: [hln11244@gmail.com](hln11244@gmail.com) 

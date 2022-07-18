@@ -9,7 +9,7 @@ const licenseBadge = {
     BSD: '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)',
     IBM: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)',
     ISC: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-    MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT',
+    MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
     Mozilla: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
     Unlicense: '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)',
 }
@@ -24,7 +24,7 @@ const licenseDescription = {
     ISC: `THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`,
     MIT: 'Distributed under the MIT License.',
     Mozilla: `This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.`,
-    Unlicense: `This is free and unencumbered software released into the public domain. < br > <br>Anyone is free to copy, modify, publish, use, compile, sell, or
+    Unlicense: `This is free and unencumbered software released into the public domain. <br> <br>Anyone is free to copy, modify, publish, use, compile, sell, or
         distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means. <br><br> In jurisdictions that recognize copyright laws, the author or authors
             of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and
             successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law. <br><br>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -34,7 +34,7 @@ const licenseDescription = {
 }
 
 const readmeWrite = (answers) => `
-${licenseBadge.answers.license}
+${licenseBadge[answers.license]}
 
 # ${answers.title}
 
@@ -86,7 +86,7 @@ ${answers.usage}
 
 ## License
 
-${licenseDescription.answers.license}
+${licenseDescription[answers.license]}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -107,6 +107,9 @@ ${answers.tests}
 Github: [github.com/${answers.username}](https://github.com/${answers.username}) <br>
 Email: [${answers.email}](${answers.email}) 
 `;
+
+// const promptName = ['username', 'email', 'title', 'description', 'installation', 'usage', 'contribution', 'tests']
+// const promptMessage =['username', 'email', 'project title', 'project description', 'installation instructions', 'usage instructions', 'contribution guidelines', 'test instructions'] 
 
 inquirer.prompt([
 
@@ -152,17 +155,17 @@ inquirer.prompt([
         message: 'Enter test instructions',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Select license.',
         choices: license
     },
 ])
     .then((answers) => {
-
+        console.log(answers.license)
         const readmeContent = readmeWrite(answers);
         fs.writeFile('ResultREADME.md', readmeContent, (err) =>
-            err ? console.log(err) : console.log('Successfully created index.html!')
+            err ? console.log(err) : console.log('Successfully created ResultREADME.md!')
         );
     });
 
