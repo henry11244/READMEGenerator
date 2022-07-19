@@ -50,8 +50,17 @@ Follow the instructions below to generate custom README files:
 
 - You will need to download the repository files to your local machine. 
 - Open the command prompt and navigate to the folder labeled "Develop" within the repository.
-- Type the following into the command prompt 'npm init -y' followed by 'npm install' to install the required modules.
-- Then type the following into the command prompt 'node index.js' to run the README generator.
+- Type the two following commands into the command prompt: 
+```
+npm init -y 
+```
+```
+npm install
+``` 
+- Then type the following into the command prompt to run the README generator.
+```
+node index.js
+```
 - You will then be presented with a series of questions about your project.
 - Once these questions are answered, a README file tited <i>ResultREADME.md </i> will be generated and added to the repository folder. 
 
