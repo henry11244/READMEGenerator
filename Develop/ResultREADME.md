@@ -1,7 +1,7 @@
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# a
+# The Best Title Ever!!!!
 
 <div id="top"></div>
 
@@ -9,10 +9,10 @@
 <div align="center">
 
 
-<h3 align="center">a</h3>
+<h3 align="center">The Best Title Ever!!!!</h3>
 
   <p align="center">
-  a
+  A Super Duper Descriptive paragraph!
     
 </div>
 
@@ -33,44 +33,41 @@
 
 ## Description
 
-a
+A Super Duper Descriptive paragraph!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Installation
 
-a
+Some well thought out installation instruction
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
 
-a
+Well thought out information regarding usage
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## License
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at <br><br>http://www.apache.org/licenses/LICENSE-2.0 <br><br>Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and
-    limitations under the License
+Distributed under the MIT License.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
 
-a
+This is where I list out contribution guidelines as well as give credit to my amazing team!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Tests
 
-a
+The best test instructions ever!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Questions
 
-Github: [github.com/a](https://github.com/a) <br>
-Email: [a](a) 
+Github: [github.com/henry11244](https://github.com/henry11244) <br>
+Email: [hln11244@gmail.com](hln11244@gmail.com) 
