@@ -1,6 +1,8 @@
+// Call to use file system/inquire modules within node.js
 const inquirer = require('inquirer')
 const fs = require('fs');
 
+// list of licenses, their badge links and descriptions
 const license = ['Apache', 'BSD', 'IBM', 'ISC', 'MIT', 'Mozilla', 'Unlicense']
 
 
@@ -33,6 +35,7 @@ const licenseDescription = {
                 <br><br> For more information, please refer to <http://unlicense.org/>`,
 }
 
+// Function to write README file including the README template
 const readmeWrite = (answers) => `
 ${licenseBadge[answers.license]}
 
@@ -108,6 +111,7 @@ Github: [github.com/${answers.username}](https://github.com/${answers.username})
 Email: [${answers.email}](${answers.email}) 
 `;
 
+// function to prompt users for project information 
 function init() {
     inquirer.prompt([
 
@@ -161,11 +165,16 @@ function init() {
     ])
         .then((answers) => {
             console.log(answers.license)
+
+            // answers is then used to populate README Content
             const readmeContent = readmeWrite(answers);
+
+            // creates README file
             fs.writeFile('ResultREADME.md', readmeContent, (err) =>
                 err ? console.log(err) : console.log('Successfully created ResultREADME.md!')
             );
         });
 }
 
+// runs README generating functions from above on JS load.
 init()
