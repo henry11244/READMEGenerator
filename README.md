@@ -33,7 +33,7 @@
 The motivation behind this project is to create an efficient and intuitive method of producing quility README files for any project repository. 
 
 The README generator utilizes Inquire.js to prompt users with a series of questions related to their project. Once these answers are provided, the application then produces a README file based on the responses. 
-![JavaScript Screenshot](develop/InquirerScreenshot.png)
+![JavaScript Screenshot](Develop/InquirerScreenshot.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
