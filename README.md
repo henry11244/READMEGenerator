@@ -59,7 +59,7 @@ Follow the instructions below to generate custom README files:
 
 Refer to video linked below for a working demonstration of the application:
 
-[![Watch the video](develop/VideoPreview.png)](https://drive.google.com/file/d/1Yy7wYpJ-u6JIj_37esFNXO0dZydKXQz0/view?usp=sharing)
+[![Watch the video](Develop/VideoPreview.png)](https://drive.google.com/file/d/1Yy7wYpJ-u6JIj_37esFNXO0dZydKXQz0/view?usp=sharing)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
