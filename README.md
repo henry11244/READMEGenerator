@@ -1,5 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 # READMEGenerator
 
 <div id="top"></div>
@@ -75,7 +73,8 @@ Refer to video linked below for a working demonstration of the application:
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<br>Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
